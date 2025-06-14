@@ -9,6 +9,12 @@ import re
 import os
 import pdfplumber
 
+#Load Spcy Model
+import spacy.cli
+spacy.cli.download("en_core_web_sm")  # <--- this line downloads the model
+import spacy
+nlp = spacy.load("en_core_web_sm")
+
 # Download NLTK resources
 nltk.download('punkt', quiet=True)
 nltk.download('stopwords', quiet=True)
